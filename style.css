@@ -465,3 +465,28 @@ body.dark-mode #contactForm fieldset {
     font-size: 0.9rem;
   }
 }
+
+footer {
+  background-color: #0c0b1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border-top: 2px solid #38bdf8;
+}
+
+footer p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+body.dark-mode footer {
+  background-color: #090d16;
+  border-top-color: #38bdf8;
+}
+
+body.dark-mode footer p {
+  color: #cbd5e1;
+}
