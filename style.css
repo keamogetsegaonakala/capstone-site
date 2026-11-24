@@ -1,5 +1,5 @@
 body {
-  background-color: #d0cfde;
+  background-color: whitesmoke;
   color: #ffffff;
 }
 
@@ -17,6 +17,22 @@ nav {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+}
+
+.nav-link,
+.nav-link:visited {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #ffffff;
+  color: #3a3a3a;
+  border-radius: 4px;
 }
 
 .nav-links {
@@ -39,7 +55,7 @@ h1 {
 }
 
 p {
-  color: #ffffff;
+  color: rgba(0, 0, 255, 0.436);
   font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
@@ -344,12 +360,14 @@ p {
   line-height: 1.55;
 }
 
+
+
 .theme-toggle {
   padding: 0.45rem 0.85rem;
   border-radius: 6px;
   border: 1px solid #38bdf8;
   background-color: transparent;
-  color: #f8fafc;
+  color: inherit;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 600;
@@ -363,45 +381,45 @@ p {
   outline-offset: 2px;
 }
 
-body.light-theme {
-  background-color: #f1f5f9;
-  color: #0f172a;
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f8fafc;
 }
 
-body.light-theme .theme-toggle {
-  color: #0f172a;
-  border-color: #0284c7;
+body.dark-mode .theme-toggle {
+  color: #f8fafc;
+  border-color: #38bdf8;
 }
 
-body.light-theme #contact,
-body.light-theme .project-card,
-body.light-theme .about-card,
-body.light-theme .css-accordion {
-  background: #ffffff;
-  border-color: #cbd5e1;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+body.dark-mode #contact,
+body.dark-mode .project-card,
+body.dark-mode .about-card,
+body.dark-mode .css-accordion {
+  background-color: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.45);
 }
 
-body.light-theme #contact h1,
-body.light-theme .project-card h2,
-body.light-theme .about-card h1,
-body.light-theme .css-accordion summary,
-body.light-theme #contactForm > label,
-body.light-theme #contactForm fieldset label {
-  color: #0f172a;
+body.dark-mode #contact h1,
+body.dark-mode .project-card h2,
+body.dark-mode .about-card h1,
+body.dark-mode .css-accordion summary,
+body.dark-mode #contactForm > label,
+body.dark-mode #contactForm fieldset label {
+  color: #f8fafc;
 }
 
-body.light-theme .project-card p,
-body.light-theme .about-card p,
-body.light-theme .css-accordion p {
-  color: #334155;
+body.dark-mode .project-card p,
+body.dark-mode .about-card p,
+body.dark-mode .css-accordion p {
+  color: #cbd5e1;
 }
 
-body.light-theme #contactForm input[type="text"],
-body.light-theme #contactForm input[type="email"],
-body.light-theme #contactForm textarea,
-body.light-theme #contactForm fieldset {
-  background-color: #f8fafc;
-  color: #0f172a;
-  border-color: #94a3b8;
+body.dark-mode #contactForm input[type="text"],
+body.dark-mode #contactForm input[type="email"],
+body.dark-mode #contactForm textarea,
+body.dark-mode #contactForm fieldset {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #475569;
 }

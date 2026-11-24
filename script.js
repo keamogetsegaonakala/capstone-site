@@ -102,19 +102,18 @@ if (form) {
 
 const themeToggle = document.querySelector("#themeToggle");
 if (themeToggle) {
-  const applyTheme = (theme) => {
-    const isLight = theme === "light";
-    document.body.classList.toggle("light-theme", isLight);
-    themeToggle.setAttribute("aria-pressed", String(!isLight));
-    themeToggle.textContent = isLight ? "Dark Mode" : "Light Mode";
+  const applyDarkMode = (isDark) => {
+    document.body.classList.toggle("dark-mode", isDark);
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.textContent = isDark ? "Default Theme" : "Dark Mode";
   };
 
-  const savedTheme = localStorage.getItem("capstoneTheme") || "dark";
-  applyTheme(savedTheme);
+  const isDarkSaved = localStorage.getItem("capstoneDarkMode") === "true";
+  applyDarkMode(isDarkSaved);
 
   themeToggle.addEventListener("click", () => {
-    const nextTheme = document.body.classList.contains("light-theme") ? "dark" : "light";
-    localStorage.setItem("capstoneTheme", nextTheme);
-    applyTheme(nextTheme);
+    const nextDarkState = !document.body.classList.contains("dark-mode");
+    localStorage.setItem("capstoneDarkMode", String(nextDarkState));
+    applyDarkMode(nextDarkState);
   });
-}s
+}
